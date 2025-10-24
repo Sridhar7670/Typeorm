@@ -1,4 +1,4 @@
-import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from "typeorm";
+import { Column, Entity, OneToMany, PrimaryGeneratedColumn ,CreateDateColumn} from "typeorm";
 // import Post from "./post"
 @Entity()
 export class User{
@@ -14,7 +14,7 @@ export class User{
     @Column({unique:true})
     email:string
 
-    @Column()
+    @CreateDateColumn()
     createdAt:Date;
 
     // @OneToMany(()=>Post,(post)=>post.user)
